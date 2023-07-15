@@ -1,0 +1,62 @@
+Q3. How to pass data from one component to another component
+A. There are several ways to pass data from one component to another. Here are some common approaches:
+
+1 Props: The most straightforward way to pass data is through props. In React, you can pass data from a parent component 
+to its child component by adding attributes to the child component's JSX tag. The child component can then access the 
+data through its props. Here's an example:
+
+// ParentComponent.jsx
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const data = 'Hello from parent';
+
+  return <ChildComponent message={data} />;
+}
+
+// ChildComponent.jsx
+import React from 'react';
+
+function ChildComponent(props) {
+  return <p>{props.message}</p>;
+}
+
+2. Context: React's Context API allows you to share data across multiple components without explicitly passing it through props. 
+You can create a context using React.createContext() and provide a value. Then, any component within the context's provider can access that value. 
+Here's an example:
+
+// DataContext.jsx
+import React from 'react';
+
+const DataContext = React.createContext();
+
+export default DataContext;
+
+// ParentComponent.jsx
+import React from 'react';
+import ChildComponent from './ChildComponent';
+import DataContext from './DataContext';
+
+function ParentComponent() {
+  const data = 'Hello from parent';
+
+  return (
+    <DataContext.Provider value={data}>
+      <ChildComponent />
+    </DataContext.Provider>
+  );
+}
+
+// ChildComponent.jsx
+import React from 'react';
+import DataContext from './DataContext';
+
+function ChildComponent() {
+  const data = React.useContext(DataContext);
+
+  return <p>{data}</p>;
+}
+
+3 State Management Libraries
+4 Routing Parameters

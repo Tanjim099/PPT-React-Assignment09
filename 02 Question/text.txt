@@ -1,0 +1,8 @@
+Q2. Explain useState Hook & what can you achieve with it?
+A. The useState hook in React allows functional components to manage state. It provides a way to add and update state within 
+a component without the need for a class.
+
+The useState hook takes an initial value as an argument and returns an array with two elements: the current state value and 
+a function to update the state. Here's the syntax:
+
+const [state, setState] = useState(initialValue);

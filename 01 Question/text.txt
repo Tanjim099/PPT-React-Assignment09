@@ -1,0 +1,3 @@
+Q1. What are hooks in react? how to identify hooks?
+A. hooks are functions that allow you to use state and other React features in functional components. 
+They provide a way to add stateful behavior to functional components, which were previously stateless.

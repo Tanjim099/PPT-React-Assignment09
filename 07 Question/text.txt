@@ -1,0 +1,30 @@
+Q7. How do you handle conditional rendering in React?
+A. 
+Conditional rendering in React allows you to selectively render components or elements based on certain conditions or state values. 
+There are several ways to handle conditional rendering in React:
+
+1. if/else Statements: You can use regular JavaScript if/else statements within your component's render method to conditionally render 
+different parts of the UI. Here's an example:
+
+function MyComponent() {
+  const isLoggedIn = true;
+
+  if (isLoggedIn) {
+    return <p>Welcome, user!</p>;
+  } else {
+    return <p>Please log in.</p>;
+  }
+}
+
+2. Ternary Operator: The ternary operator (condition ? expression1 : expression2) is a concise way to conditionally render elements inline. 
+Here's an example:
+
+function MyComponent() {
+  const isLoggedIn = true;
+
+  return isLoggedIn ? <p>Welcome, user!</p> : <p>Please log in.</p>;
+}
+
+3. Logical && Operator
+4. Inline Functions
+5. Rendering Null or Empty Fragment
